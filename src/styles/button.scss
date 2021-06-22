@@ -1,0 +1,24 @@
+.button {
+  height: 50px;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #835afd;
+  color: white;
+  display: flex;
+  padding: 0 32px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  transition: .25s all;
+
+  &:not(:disabled):hover {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
