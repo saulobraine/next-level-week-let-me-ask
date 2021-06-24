@@ -1,0 +1,70 @@
+.question {
+  background: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  padding: 24px;
+
+  &+.question {
+    margin-top: 8px;
+  }
+
+  p {
+    color: #29292e;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.02);
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      span {
+        color: #737380;
+        font-size: 14px;
+      }
+    }
+
+    button {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      transition: .2s all;
+
+      &.like-button {
+        display: flex;
+        align-items: flex-end;
+        gap: 8px;
+
+        span {
+          line-height: 1;
+        }
+
+        &.like-button:hover {
+          transform: scale(0.95)
+        }
+
+        &.liked {
+          color: #835afd;
+
+          svg path {
+            stroke: #835afd
+          }
+        }
+      }
+    }
+  }
+}

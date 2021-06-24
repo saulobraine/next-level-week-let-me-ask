@@ -1,14 +1,17 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ButtonHTMLAttributes } from "react";
 
 import '../styles/button.scss';
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: ReactNode;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  isOutlined?: boolean;
 }
 
-export function Button({ children, ...props }: ButtonProps) {
+export function Button({ children, isOutlined = false, ...props }: ButtonProps) {
   return (
     <>
-      <button className="button" type="button" {...props}>
+      <button
+        className={`button ${isOutlined && 'outlined'}`}
+        type="button"
+        {...props}>
         {children}
       </button>
     </>

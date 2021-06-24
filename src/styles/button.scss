@@ -21,4 +21,10 @@
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  &.outlined {
+    background: white;
+    color: #835afd;
+    border: 1px solid;
+  }
 }

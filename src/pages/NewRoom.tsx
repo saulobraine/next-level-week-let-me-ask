@@ -62,7 +62,7 @@ export function NewRoom() {
       return;
     }
 
-    const firebaseRoom = await roomRef.child(slugRoom).set({
+    await roomRef.child(slugRoom).set({
       title: newRoom,
       authorId: user?.id,
     });
@@ -88,7 +88,7 @@ export function NewRoom() {
               onChange={event => setNewRoom(event.target.value)}
               value={newRoom}
             />
-            <Button type="submit">Entrar na sala</Button>
+            <Button type="submit">Criar sala</Button>
           </form>
           <p>Quer entrar em uma sala existente? <Link to="/">clique aqui</Link></p>
         </div>
