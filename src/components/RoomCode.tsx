@@ -1,9 +1,6 @@
-import { ReactNode } from 'react';
-
 import copyImg from '../assets/images/copy.svg';
 
 import '../styles/room-code.scss';
-
 interface RoomCodeProps {
   roomCode: string;
 }
@@ -11,7 +8,9 @@ interface RoomCodeProps {
 export function RoomCode({ roomCode }: RoomCodeProps) {
 
   function copyRoomCodeToClipboard() {
-    navigator.clipboard.writeText(roomCode)
+    navigator.clipboard.writeText(roomCode);
+
+    alert('Copied!');
   }
 
   return (
