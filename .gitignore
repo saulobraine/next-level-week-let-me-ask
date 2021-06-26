@@ -16,3 +16,5 @@ yarn.lock
 
 .env.local
 firebase-debug.log
+.firebase
+.github
