@@ -17,7 +17,7 @@ type RoomParams = {
 }
 
 export function Room() {
-  const { user } = useAuth();
+  const { user, signInWithGoogle } = useAuth();
   const params = useParams<RoomParams>();
 
   const roomId = params.id;
@@ -92,7 +92,7 @@ export function Room() {
           <div className="form-footer">
             {!user ? (
               <span>
-                Para enviar uma pergunta, <button>faça seu login.</button>
+                Para enviar uma pergunta, <button onClick={signInWithGoogle}>faça seu login.</button>
               </span>
             ) : (
               <>
